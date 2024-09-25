@@ -1,0 +1,29 @@
+header {
+  background-color: midnightblue;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 16px;
+}
+a {
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.navigation {
+  padding: 16px;
+
+  text-align: right;
+}
+
+.home {
+  font-size: 20px;
+  &:hover {
+    text-decoration: none;
+  }
+}

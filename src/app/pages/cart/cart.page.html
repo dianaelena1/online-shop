@@ -1,0 +1,20 @@
+<ng-container seo [seoTitle]="'Cart Page'">
+  <h1 class="cart-page-title">Cart page</h1>
+  <div class="cart-sheet">
+    <div>
+      @for (item of cartService.items(); track item.name) {
+      <div>
+        @defer {
+        <img [ngSrc]="item.src" height="50" width="50" alt="missing" />
+        } @placeholder(minimum 50ms) {
+        <span></span>
+        } {{ item.name }} | {{item.count }} | {{item.count * item.price }}$
+        <button class="cart-remove" (click)="remove(item)">Remove</button>
+      </div>
+
+      } @empty {
+      <div class="cart-empty">No products added to cart.</div>
+      } @if(cartService.totalValue()) { Total: {{cartService.totalValue()}} }
+    </div>
+  </div>
+</ng-container>

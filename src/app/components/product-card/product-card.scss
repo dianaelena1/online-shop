@@ -1,0 +1,95 @@
+@use "../../../../public/styles/general" as *;
+
+div.product-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  background-color: $color-white;
+  width: 250px;
+
+  &:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+  }
+}
+
+div.placeholder-container {
+  width: 100%;
+  text-align: center;
+  background-color: gray;
+}
+
+.title {
+  font-weight: 800;
+  font-size: $font-size-24;
+}
+
+.price {
+  font-weight: 400;
+  flex: 1;
+  font-size: 12px;
+  text-align: left;
+  padding-left: 8px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0;
+  width: 36px;
+  height: 36px;
+  background-color: $color-accent;
+  color: black;
+  border-radius: 36px;
+  font-size: 18px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #f0f0f0;
+  }
+}
+
+.card-footer {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-wrapper {
+  background-color: #fafafa;
+  padding: 12px;
+}
+
+.card-body {
+  padding: 12px;
+}
+
+.add {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.add:focus {
+  outline: none;
+}
+
+.price {
+  font-size: 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.price:hover {
+  background-color: #f0f0f0;
+  color: #003366;
+  padding: 5px;
+  border-radius: 4px;
+}

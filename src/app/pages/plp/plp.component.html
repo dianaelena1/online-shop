@@ -1,0 +1,16 @@
+<ng-container seo [seoTitle]="'Products'" class="page">
+  <div class="swiper-container">
+    <swiper-container class="swiper-wrapper">
+      @for (product of products; track product.name) {
+      <swiper-slide class="swiper-slide">
+        <product-card [product]="product"></product-card>
+      </swiper-slide>
+      } @empty {
+      <swiper-slide>There are no items.</swiper-slide>
+      }
+    </swiper-container>
+
+    <!-- Pagination dots-->
+    <!-- <div class="swiper-pagination"></div> -->
+  </div>
+</ng-container>
